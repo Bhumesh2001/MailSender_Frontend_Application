@@ -6,7 +6,7 @@ document.getElementById('l-form').addEventListener('submit', async (event) => {
         password: document.getElementById('password').value,
     };
 
-    let response = await fetch('http://localhost:5000/user/login', {
+    let response = await fetch('https://mailsender-backend-application.onrender.com/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ document.getElementById('l-form').addEventListener('submit', async (event) => {
         localStorage.setItem('tokenExpiresAt', expiresAt);
 
         setTimeout(() => {
-            window.location.href = '/frontend/pages/index.html';
+            window.location.href = '/index.html';
         }, 2000);
     } else if (response.status === 500) {
         err_show.textContent = 'Internal server error';

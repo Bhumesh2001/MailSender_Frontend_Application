@@ -46,7 +46,7 @@ document.getElementById('myForm').addEventListener('submit', async (event) => {
     };
 
     async function sendDataToServer(formData) {
-        let response = await fetch('http://localhost:5000/mail', {
+        let response = await fetch('https://mailsender-backend-application.onrender.com/mail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

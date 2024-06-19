@@ -10,7 +10,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
     const btn1 = document.getElementById('sub-btn1');
     const btn2 = document.getElementById('sub-btn2');
 
-    let response = await fetch('http://localhost:5000/user/register', {
+    let response = await fetch('https://mailsender-backend-application.onrender.com/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
         setTimeout(() => {
             btn2.classList.remove('d-block');
             btn1.classList.add('d-block');
-            window.location.href = '/frontend/pages/index.html';
+            window.location.href = '/index.html';
         }, 2000);
     } else if (response.status === 401) {
         document.getElementById('err-msg').classList.remove('d-none');
