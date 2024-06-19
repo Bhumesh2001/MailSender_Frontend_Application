@@ -1,0 +1,51 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top pt-3">
+    <div class="container">
+        <a class="navbar-brand" draggable="false" href="/frontend/pages/index.html">MailSender</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" draggable="false" aria-current="page"
+                        href="/frontend/pages/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" draggable="false" href="/frontend/pages/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" draggable="false" href="/frontend/pages/services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" draggable="false" href="/frontend/pages/contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" draggable="false" href="/frontend/pages/sendEmail.html">Send Email</a>
+                </li>
+            </ul>
+            <form class="d-flex gap-2 my-1">
+                <a href="/frontend/pages/login.html">
+                    <button class="btn btn-outline-light text-decoration-none" id="login_btn" type="button">Login</button>
+                </a>
+                <a href="/frontend/pages/signup.html">
+                    <button class="btn btn-success text-decoration-none" id="signup_btn" type="button">Get started</button>
+                </a>
+                <div class="dropdown d-none" id="default-user">
+                    <div class="profile-icon dropdown-toggle" id="profileDropdown" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-eye"></i> View</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-edit"></i> Update</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
