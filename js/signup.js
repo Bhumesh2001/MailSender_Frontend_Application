@@ -39,7 +39,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
         document.getElementById('err-msg').classList.remove('d-none');
         document.getElementById('err-msg').classList.remove('d-block');
     } else {
-        console.log(response);
+        console.log(await response.json());
     };
 
 });
