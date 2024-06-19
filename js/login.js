@@ -6,7 +6,7 @@ document.getElementById('l-form').addEventListener('submit', async (event) => {
         password: document.getElementById('password').value,
     };
 
-    let response = await fetch('https://mailsender-backend-application.onrender.com/login', {
+    let response = await fetch('https://mailsender-backend-application.onrender.com/user/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -10,7 +10,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
     const btn1 = document.getElementById('sub-btn1');
     const btn2 = document.getElementById('sub-btn2');
 
-    let response = await fetch('https://mailsender-backend-application.onrender.com/register', {
+    let response = await fetch('https://mailsender-backend-application.onrender.com/user/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
