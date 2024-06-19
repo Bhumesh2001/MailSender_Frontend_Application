@@ -6,23 +6,23 @@ body {
 }
 
 .bg-img1 {
-    background-image: url('/frontend/images/email_img1.jpg');
+    background-image: url('/images/email_img1.jpg');
 }
 
 .bg-img2 {
-    background-image: url('/frontend/images/email_img2.jpg');
+    background-image: url('/images/email_img2.jpg');
 }
 
 .bg-img3 {
-    background-image: url('/frontend/images/email_img3.jpg');
+    background-image: url('/images/email_img3.jpg');
 }
 
 .bg-img4 {
-    background-image: url('/frontend/images/email_img4.jpg');
+    background-image: url('/images/email_img4.jpg');
 }
 
 .bg-img5 {
-    background-image: url('/frontend/images/email_img5.jpg');
+    background-image: url('/images/email_img5.jpg');
 }
 
 .carousel-caption,
