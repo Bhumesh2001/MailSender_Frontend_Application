@@ -25,7 +25,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
 
     if (response.ok) {
         let res = await response.json();
-      
+
         const expiresIn = 12 * 60 * 60 * 1000;
         const expiresAt = Date.now() + expiresIn;
 
@@ -40,6 +40,8 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
     } else if (response.status === 401) {
         document.getElementById('err-msg').classList.remove('d-none');
         document.getElementById('err-msg').classList.remove('d-block');
+        btn2.classList.remove('d-block');
+        btn1.classList.add('d-block');
     } else {
         console.log(await response.json());
     };
