@@ -21,7 +21,8 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData),
-    });
+    });    
+    console.log(response);
 
     if (response.ok) {
         let res = await response.json();
