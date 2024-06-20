@@ -21,7 +21,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData),
-    });    
+    });
     console.log(response, response.status);
 
     if (response.ok) {
@@ -38,13 +38,14 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
             btn1.classList.add('d-block');
             window.location.href = '/index.html';
         }, 2000);
-    } else if (response.status === 401) {
+    } else {
+        console.log(await response.json());
+    };
+    if (response.status === 401) {
         document.getElementById('err-msg').classList.remove('d-none');
         document.getElementById('err-msg').classList.remove('d-block');
         btn2.classList.remove('d-block');
         btn1.classList.add('d-block');
-    } else {
-        console.log(await response.json());
-    };
+    }
 
 });
