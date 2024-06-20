@@ -35,18 +35,19 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
 
         setTimeout(() => {
             btn2.classList.remove('d-block');
+            btn2.classList.add('d-none');
             btn1.classList.add('d-block');
             window.location.href = '/index.html';
         }, 2000);
+    } else if (response.status === 401) {
+        document.getElementById('err-msg').classList.remove('d-none');
+        document.getElementById('err-msg').classList.remove('d-block');
+
+        btn2.classList.remove('d-block');
+        btn2.classList.add('d-none');
+        btn1.classList.add('d-block');
     } else {
         console.log(await response.json());
     };
-    console.log(response.status === 401);
-    if (response.status === 401) {
-        document.getElementById('err-msg').classList.remove('d-none');
-        document.getElementById('err-msg').classList.remove('d-block');
-        btn2.classList.remove('d-block');
-        btn1.classList.add('d-block');
-    }
 
 });
