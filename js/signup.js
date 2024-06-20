@@ -41,6 +41,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
     } else {
         console.log(await response.json());
     };
+    console.log(response.status === 401);
     if (response.status === 401) {
         document.getElementById('err-msg').classList.remove('d-none');
         document.getElementById('err-msg').classList.remove('d-block');
