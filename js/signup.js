@@ -6,7 +6,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
 
     btn1.classList.remove('d-block');
     btn1.classList.add('d-none');
-    
+
     btn2.classList.remove('d-none');
     btn2.classList.add('d-block');
 
@@ -37,13 +37,6 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
 
         setTimeout(() => {
             window.location.href = '/index.html';
-
-            btn2.classList.remove('d-block');
-            btn2.classList.add('d-none');
-
-            btn1.classList.remove('d-none');
-            btn1.classList.add('d-block');
-
         }, 2000);
     } else if (response.status === 401) {
         document.getElementById('err-msg').classList.remove('d-none');
