@@ -1,8 +1,8 @@
 document.getElementById('r-form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const btn1 = document.getElementById('sub-btn1');
-    const btn2 = document.getElementById('sub-btn2');
+    let btn1 = document.getElementById('sub-btn1');
+    let btn2 = document.getElementById('sub-btn2');
 
     btn1.classList.add('d-none');
     btn2.classList.remove('d-none');
@@ -22,7 +22,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
         },
         body: JSON.stringify(formData),
     });    
-    console.log(response);
+    console.log(response, response.status);
 
     if (response.ok) {
         let res = await response.json();
