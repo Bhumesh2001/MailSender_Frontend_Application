@@ -35,14 +35,21 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
         localStorage.setItem('token', res.token);
         localStorage.setItem('tokenExpiresAt', expiresAt);
 
+        const err = document.getElementById('err-msg');
+        if(err.classList.contains('d-block')){
+            err.classList.remove('d-block');
+            err.classList.add('d-none');
+        };
+
         setTimeout(() => {
             btn2.classList.remove('d-block');
             btn2.classList.add('d-none');
 
+            window.location.href = '/index.html';
+
             btn1.classList.remove('d-none');
             btn1.classList.add('d-block');
 
-            window.location.href = '/index.html';
         }, 2000);
     } else if (response.status === 401) {
         document.getElementById('err-msg').classList.remove('d-none');
