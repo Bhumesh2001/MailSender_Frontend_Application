@@ -1,14 +1,19 @@
 document.getElementById('r-form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    let formData = {
-        firstname: document.getElementById('firstName').value.trim(),
-        lastname: document.getElementById('lastName').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        password: document.getElementById('password').value.trim(),
-    };
     const btn1 = document.getElementById('sub-btn1');
     const btn2 = document.getElementById('sub-btn2');
+
+    btn1.classList.add('d-none');
+    btn2.classList.remove('d-none');
+    btn2.classList.add('d-block');
+
+    let formData = {
+        firstname: document.getElementById('firstName').value,
+        lastname: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value,
+    };
 
     let response = await fetch('https://mailsender-backend-application.onrender.com/user/register', {
         method: 'POST',
@@ -20,10 +25,7 @@ document.getElementById('r-form').addEventListener('submit', async (event) => {
 
     if (response.ok) {
         let res = await response.json();
-        btn1.classList.add('d-none');
-        btn2.classList.remove('d-none');
-        btn2.classList.add('d-block');
-
+      
         const expiresIn = 12 * 60 * 60 * 1000;
         const expiresAt = Date.now() + expiresIn;
 

@@ -1,6 +1,14 @@
 document.getElementById('l-form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    const lbtn1 = document.getElementById('login-btn1');
+    const lbtn2 = document.getElementById('login-btn2');
+    const err_show = document.getElementById('err_msg');
+
+    lbtn1.classList.add('d-none');
+    lbtn2.classList.remove('d-none');
+    lbtn2.classList.add('d-block');
+
     const formData = {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value,
@@ -13,14 +21,6 @@ document.getElementById('l-form').addEventListener('submit', async (event) => {
         },
         body: JSON.stringify(formData),
     });
-
-    const lbtn1 = document.getElementById('login-btn1');
-    const lbtn2 = document.getElementById('login-btn2');
-    const err_show = document.getElementById('err_msg');
-
-    lbtn1.classList.add('d-none');
-    lbtn2.classList.remove('d-none');
-    lbtn2.classList.add('d-block');
 
     if (response.ok) {
         const res = await response.json();
