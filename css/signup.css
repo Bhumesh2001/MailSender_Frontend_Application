@@ -12,18 +12,6 @@ body {
     position: relative;
 }
 
-.form-container:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: linear-gradient(45deg, #6c63ff, #f472b6);
-    border-radius: 20px;
-    z-index: -1;
-}
-
 .form-container h2 {
     text-align: center;
     margin-bottom: 30px;
