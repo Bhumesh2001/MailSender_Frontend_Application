@@ -41,7 +41,22 @@ async function loadComponent(url, placeholderId) {
                 user.classList.add('d-block');
             };
         };
+        document.getElementById('user-logout').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            localStorage.removeItem('tokenExpiresAt');
+
+            login_btn.classList.remove('d-none');
+            login_btn.classList.add('d-block');
+
+            signup_btn.classList.remove('d-none');
+            signup_btn.classList.add('d-block');
+
+            user.classList.remove('d-block');
+            user.classList.add('d-none');
+        });
+
     } catch (error) {
         console.error('Error fetching component:', error);
     };
 };
+

@@ -9,8 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" draggable="false" aria-current="page"
-                        href="/index.html">Home</a>
+                    <a class="nav-link active" draggable="false" aria-current="page" href="/index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" draggable="false" href="/about.html">About</a>
@@ -26,11 +25,13 @@
                 </li>
             </ul>
             <form class="d-flex gap-2 my-1">
-                <a href="/login.html">
-                    <button class="btn btn-outline-light text-decoration-none" id="login_btn" type="button">Login</button>
+                <a href="/login.html" class="text-decoration-none">
+                    <button class="btn btn-outline-light text-decoration-none" id="login_btn"
+                        type="button">Login</button>
                 </a>
-                <a href="/signup.html">
-                    <button class="btn btn-success text-decoration-none" id="signup_btn" type="button">Get started</button>
+                <a href="/signup.html" class="text-decoration-none">
+                    <button class="btn btn-success text-decoration-none" id="signup_btn" type="button">Get
+                        started</button>
                 </a>
                 <div class="dropdown d-none" id="default-user">
                     <div class="profile-icon dropdown-toggle" id="profileDropdown" data-toggle="dropdown"
@@ -42,7 +43,8 @@
                         <a class="dropdown-item" href="#"><i class="fas fa-user-edit"></i> Update</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-trash"></i> Delete</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        <a class="dropdown-item" id="user-logout" href="#"><i class="fas fa-sign-out-alt"></i>
+                            Logout</a>
                     </div>
                 </div>
             </form>
