@@ -59,4 +59,3 @@ async function loadComponent(url, placeholderId) {
         console.error('Error fetching component:', error);
     };
 };
-
