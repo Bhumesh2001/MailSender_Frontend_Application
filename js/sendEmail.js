@@ -1,7 +1,20 @@
-const socket = io('https://mailsender-backend-application.onrender.com');
+const socket = io('http://localhost:5000');
 
 let log = document.getElementById('log');
 let ptag = document.createElement('p');
+
+function generateRandomRoomName(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters.charAt(randomIndex);
+    };
+    return result;
+};
+const randomRoomName = generateRandomRoomName(8);
+console.log(randomRoomName);
+socket.emit('join',randomRoomName);
 
 socket.on('connect', () => {
     console.log('Connected to the server');
@@ -65,7 +78,7 @@ document.getElementById('myForm').addEventListener('submit', async (event) => {
         await sendDataToServer(formData);
     };
     async function sendDataToServer(formData) {
-        let response = await fetch('https://mailsender-backend-application.onrender.com/mail', {
+        let response = await fetch('http://localhost:5000/mail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
