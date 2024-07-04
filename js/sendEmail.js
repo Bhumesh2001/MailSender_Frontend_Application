@@ -3,6 +3,14 @@ const socket = io('https://mailsender-backend-application.onrender.com');
 let log = document.getElementById('log');
 let ptag = document.createElement('p');
 
+const chars = 'abcdefghijklmnopqrstuvwxyz1234567890';
+let randomString = '';
+for (let i = 0; i < 15; i++) {
+    randomString += chars[Math.floor(Math.random() * chars.length)];
+}
+const randomGmailAddress = randomString + '@gmail.com';
+socket.emit('join', randomGmailAddress);
+
 socket.on('connect', () => {
     console.log('Connected to the server');
 });
