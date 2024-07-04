@@ -3,24 +3,12 @@ const socket = io('https://mailsender-backend-application.onrender.com');
 let log = document.getElementById('log');
 let ptag = document.createElement('p');
 
-function generateRandomRoomName(length) {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        result += characters.charAt(randomIndex);
-    };
-    return result;
-};
-const randomRoomName = generateRandomRoomName(8);
-console.log(randomRoomName);
-socket.emit('join',randomRoomName);
-
 socket.on('connect', () => {
     console.log('Connected to the server');
 });
 
 socket.on('log', (message) => {
+    console.log(message);
     const Ptag = document.createElement('p');
     if (message.success) {
         Ptag.textContent = message.mesg;
