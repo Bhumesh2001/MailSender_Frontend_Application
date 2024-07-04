@@ -1,20 +1,7 @@
+const socket = io('https://mailsender-backend-application.onrender.com');
 
 let log = document.getElementById('log');
 let ptag = document.createElement('p');
-
-function generateRandomId(length) {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        result += characters.charAt(randomIndex);
-    };
-    return result;
-};
-const userId = generateRandomId(8);
-const socket = io('https://mailsender-backend-application.onrender.com', {
-    query: { userId }
-});
 
 socket.on('connect', () => {
     console.log('Connected to the server');
