@@ -26,6 +26,13 @@ socket.on("disconnect", () => {
 document.getElementById("myForm").addEventListener("submit", async (event) => {
   event.preventDefault();
 
+  let bool = authenticateUser();
+  if(!bool){
+    setTimeout(() => {
+      window.location.href = '/signup.html';
+    },1000);
+  };
+
   let formData = {
     email: document.querySelector("#exampleInputEmail1").value,
     app_pass: document.querySelector("#exampleInputPassword1").value,
@@ -86,3 +93,22 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
     }
   }
 });
+
+function authenticateUser() {
+  try {
+    const token = localStorage.getItem('token');
+    const expiresAt = localStorage.getItem('tokenExpiresAt');
+    if (token) {
+      if (expiresAt && Date.now() > parseInt(expiresAt)) {
+        console.log('Token has expired');
+        return false;
+      }
+      return true;
+    } else {
+      return false;
+    };
+  } catch (error) {
+    console.log(error.message);
+    return false;
+  };
+};
