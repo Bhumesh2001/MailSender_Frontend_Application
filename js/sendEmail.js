@@ -17,6 +17,7 @@ socket.on("log", (message) => {
     Ptag.classList.add("text-danger");
     log.appendChild(Ptag);
   }
+  log.scrollTop = log.scrollHeight;
 });
 
 socket.on("disconnect", () => {
