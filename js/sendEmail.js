@@ -29,11 +29,11 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
   event.preventDefault();
 
   log.textContent = '';
-  
+
   let bool = authenticateUser();
   if(!bool){
     setTimeout(() => {
-      window.location.href = '/login.html';
+      window.location.href = '/sendEmail.html';
     },1000);
   };
 
