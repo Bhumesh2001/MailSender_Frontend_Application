@@ -65,7 +65,7 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
         fileName,
         fileType,
       };
-      sendDataToServer(form_data);
+      await sendDataToServer(form_data);
     }
     reader.onload = function () {
       const base64Data = reader.result.split(",")[1];
