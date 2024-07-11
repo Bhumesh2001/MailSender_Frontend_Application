@@ -29,7 +29,7 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
   let bool = authenticateUser();
   if(!bool){
     setTimeout(() => {
-      window.location.href = '/signup.html';
+      window.location.href = '/login.html';
     },1000);
   };
 

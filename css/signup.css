@@ -62,3 +62,13 @@ body {
 .btn-circle {
   width: 80px;
 }
+
+.signup-link{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  margin-top: 3%;
+}
+.signup-link:hover{
+  text-decoration: underline;
+}

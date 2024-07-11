@@ -80,3 +80,13 @@ body {
 .login-btn {
   width: 60px;
 }
+
+.account-link{
+  text-decoration: none;
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 4%;
+}
+.account-link:hover{
+  text-decoration: underline;
+}
