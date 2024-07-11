@@ -1,207 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>Mail Sender</title>
-    <link rel="icon" type="image/png" href="/icons/email.png">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+    <link rel="icon" type="image/png" href="/icons/email.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div id="navbar-placeholder"></div>
     <main>
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col p-0">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item bg-img1">
-                                    <div
-                                        class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center">
-                                        <h1>Professional Emailing Made Simple</h1>
-                                        <p class="fs-5 fw-2">
-                                            With MailSender, Quickly Attach and Preview Documents Before Sending Emails
-                                            to Contacts and HR, Enhancing Your Professional Image
-                                        </p>
-                                        <a href="/sendEmail.html" class="send-btn">
-                                            <button type="button"
-                                                class="btn btn-warning bg-gradient btn-rounded btn-lg m-2">Send
-                                                emails</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item bg-img2">
-                                    <div
-                                        class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center">
-                                        <h1>Master Email Management with MailSender</h1>
-                                        <p class="fs-5 fw-2">
-                                            Attach, Preview, and Send Emails Effortlessly to Boost Your Communication
-                                            with Contacts and HR
-                                        </p>
-                                        <a href="/sendEmail.html" class="send-btn">
-                                            <button type="button"
-                                                class="btn btn-warning bg-gradient btn-rounded btn-lg m-2">Send
-                                                emails</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item bg-img3">
-                                    <div
-                                        class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center">
-                                        <h1>Revolutionize Your Email Workflow</h1>
-                                        <p class="fs-5 fw-2">
-                                            MailSender's Attachment Manager Streamlines Email Preparation, Making It
-                                            Easier Than Ever to Connect with Your Network.
-                                        </p>
-                                        <a href="/sendEmail.html" class="send-btn">
-                                            <button type="button"
-                                                class="btn btn-warning bg-gradient btn-rounded btn-lg m-2">Send
-                                                emails</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item active bg-img4">
-                                    <div
-                                        class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center">
-                                        <h1>Send Emails Like a Pro</h1>
-                                        <p class="fs-5 fw-2">
-                                            Sending emails has never been easier. With MailSender, you
-                                            can
-                                            quickly compose and send emails to your contacts and hr with just a few
-                                            clicks.
-                                        </p>
-                                        <a href="/sendEmail.html" class="send-btn">
-                                            <button type="button"
-                                                class="btn btn-warning bg-gradient btn-rounded btn-lg m-2">Send
-                                                emails</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item bg-img5">
-                                    <div
-                                        class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center">
-                                        <h1>Innovative Email Management</h1>
-                                        <p class="fs-5 fw-2">
-                                            MailSender's Attachment Manager Lets You Attach and Preview Files Instantly,
-                                            Streamlining Your Email Process and Facilitating Smooth Communication with
-                                            Contacts and HR
-                                        </p>
-                                        <a href="/sendEmail.html" class="send-btn">
-                                            <button type="button"
-                                                class="btn btn-warning bg-gradient btn-rounded btn-lg m-2">Send
-                                                emails</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="my-4 py-3">
-            <div class="container">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-md-6 col-12 d-flex justify-content-center align-items-center mr-3">
-                        <div class="ratio ratio-16x9">
-                            <iframe class="rounded" src="https://www.youtube.com/embed/hXiPshHn9Pw?si=jTQSkl4F2XBdP1v9"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h2 class="text-center mt-3 mb-0">Create your app password</h2>
-                        <p class="text-center fs-5 mt-3 mb-0">
-                            Welcome to MailSender, where security meets simplicity. With our robust app password
-                            service, generate and manage secure passwords effortlessly across all your devices. Enjoy
-                            peace
-                            of mind with strong encryption. create your app password and use for sending email with
-                            contact
-                            and hr.
-                        </p>
-                    </div>
-                </div>
-                <div class="row mt-4 pt-3">
-                    <div class="col text-center">
-                        <img src="/images/email_img6.jpg" class="rounded" width="100%" alt="mail_img3">
-                        <h2 class="mt-3 mb-0">Compose and Send Emails Effortlessly</h2>
-                        <p class="fs-5 my-3 mb-0">
-                            MailSender offers a clean and intuitive editor that streamlines the process of composing
-                            emails. Whether you're drafting a quick note or a detailed message, our editor makes it a
-                            smooth and enjoyable experience.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="my-3">
-            <div class="container">
-                <div class="row">
+      <section>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col p-0">
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item bg-img1">
                     <div
-                        class="col my-3 flex-md-row flex-column gap-5 d-flex justify-content-center align-items-center">
-                        <div class="card p-2" style="width: 18rem;">
-                            <div class="icon px-3">
-                                <img src="/icons/security.png" class="card-img-top w-25" alt="Security_icon">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Advanced Security</h5>
-                                <p class="card-text">
-                                    Your data security is our top priority. MailSender employs industry-leading
-                                    encryption protocols to protect your emails and personal information from
-                                    unauthorized access.
-                                </p>
-                                <a href="https://www.hpe.com/in/en/security-risk-compliance-services.html?jumpid=ps_tfanpn2e9_aid-520097628&ef_id=Cj0KCQjwxeyxBhC7ARIsAC7dS38wgua6VkhzeU6mdYPtWDImsj1GyoQZTPhIR-BXoJs4C0uSnHrlN8kaAm6iEALw_wcB:G:s&s_kwcid=AL!13472!3!667148581196!p!!g!!it%20security%20services!20281339184!154767249067&gad_source=1&gclid=Cj0KCQjwxeyxBhC7ARIsAC7dS38wgua6VkhzeU6mdYPtWDImsj1GyoQZTPhIR-BXoJs4C0uSnHrlN8kaAm6iEALw_wcB"
-                                    class="card-link" target="_blank">Learn more...</a>
-                            </div>
-                        </div>
-                        <div class="card p-2" style="width: 18rem;">
-                            <div class="icon px-3">
-                                <img src="/icons/attach.png" class="card-img-top w-25" alt="attachment_icon">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Attachments Made Simple</h5>
-                                <p class="card-text">
-                                    MailSender attachment manager lets you quickly add and preview attachments before
-                                    sending your emails, attached your email file and send email with
-                                    your contact and hr.
-                                </p>
-                                <a href="https://en.wikipedia.org/wiki/Email_attachment" target="_blank"
-                                    class="card-link">Learn
-                                    more...</a>
-                            </div>
-                        </div>
-                        <div class="card p-2" style="width: 18rem;">
-                            <div class="icon px-3">
-                                <img src="/icons/gmail.png" class="card-img-top w-25" alt="Gmail_icon">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">See Your Inbox In Gmail</h5>
-                                <p class="card-text">
-                                    Check your email in your phone or laptop for reply of email in Inbox
-                                    Navigate, Organize, and Stay Updated with Ease.our tool automatically send mail to
-                                    the provide hr or contact mail.
-                                </p>
-                                <a href="https://www.webrankinfo.com/tips/gmail/sign-in/" target="_blank"
-                                    class="card-link">Learn
-                                    more...</a>
-                            </div>
-                        </div>
+                      class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center"
+                    >
+                      <h1>Professional Emailing Made Simple</h1>
+                      <p class="fs-5 fw-2">
+                        With MailSender, Quickly Attach and Preview Documents
+                        Before Sending Emails to Contacts and HR, Enhancing Your
+                        Professional Image
+                      </p>
+                      <a href="/sendEmail.html" class="send-btn">
+                        <button
+                          type="button"
+                          class="btn btn-warning bg-gradient btn-rounded btn-lg m-2"
+                        >
+                          Send emails
+                        </button>
+                      </a>
                     </div>
+                  </div>
+                  <div class="carousel-item bg-img2">
+                    <div
+                      class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center"
+                    >
+                      <h1>Master Email Management with MailSender</h1>
+                      <p class="fs-5 fw-2">
+                        Attach, Preview, and Send Emails Effortlessly to Boost
+                        Your Communication with Contacts and HR
+                      </p>
+                      <a href="/sendEmail.html" class="send-btn">
+                        <button
+                          type="button"
+                          class="btn btn-warning bg-gradient btn-rounded btn-lg m-2"
+                        >
+                          Send emails
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item bg-img3">
+                    <div
+                      class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center"
+                    >
+                      <h1>Revolutionize Your Email Workflow</h1>
+                      <p class="fs-5 fw-2">
+                        MailSender's Attachment Manager Streamlines Email
+                        Preparation, Making It Easier Than Ever to Connect with
+                        Your Network.
+                      </p>
+                      <a href="/sendEmail.html" class="send-btn">
+                        <button
+                          type="button"
+                          class="btn btn-warning bg-gradient btn-rounded btn-lg m-2"
+                        >
+                          Send emails
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item active bg-img4">
+                    <div
+                      class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center"
+                    >
+                      <h1>Send Emails Like a Pro</h1>
+                      <p class="fs-5 fw-2">
+                        Sending emails has never been easier. With MailSender,
+                        you can quickly compose and send emails to your contacts
+                        and hr with just a few clicks.
+                      </p>
+                      <a href="/sendEmail.html" class="send-btn">
+                        <button
+                          type="button"
+                          class="btn btn-warning bg-gradient btn-rounded btn-lg m-2"
+                        >
+                          Send emails
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item bg-img5">
+                    <div
+                      class="carousel-caption flex-column d-flex h-100 align-items-center justify-content-center"
+                    >
+                      <h1>Innovative Email Management</h1>
+                      <p class="fs-5 fw-2">
+                        MailSender's Attachment Manager Lets You Attach and
+                        Preview Files Instantly, Streamlining Your Email Process
+                        and Facilitating Smooth Communication with Contacts and
+                        HR
+                      </p>
+                      <a href="/sendEmail.html" class="send-btn">
+                        <button
+                          type="button"
+                          class="btn btn-warning bg-gradient btn-rounded btn-lg m-2"
+                        >
+                          Send emails
+                        </button>
+                      </a>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+      <section class="my-4 py-3">
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div
+              class="col-md-6 col-12 d-flex justify-content-center align-items-center mr-3"
+            >
+              <div class="ratio ratio-16x9">
+                <iframe
+                  class="rounded"
+                  src="https://www.youtube.com/embed/hXiPshHn9Pw?si=jTQSkl4F2XBdP1v9"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="col">
+              <h2 class="text-center mt-3 mb-0">Create your app password</h2>
+              <p class="text-center fs-5 mt-3 mb-0">
+                Welcome to MailSender, where security meets simplicity. With our
+                robust app password service, generate and manage secure
+                passwords effortlessly across all your devices. Enjoy peace of
+                mind with strong encryption. create your app password and use
+                for sending email with contact and hr.
+              </p>
+            </div>
+          </div>
+          <div class="row mt-4 pt-3">
+            <div class="col text-center">
+              <img
+                src="/images/email_img6.jpg"
+                class="rounded"
+                width="100%"
+                alt="mail_img3"
+              />
+              <h2 class="mt-3 mb-0">Compose and Send Emails Effortlessly</h2>
+              <p class="fs-5 my-3 mb-0">
+                MailSender offers a clean and intuitive editor that streamlines
+                the process of composing emails. Whether you're drafting a quick
+                note or a detailed message, our editor makes it a smooth and
+                enjoyable experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-3">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col my-3 flex-md-row flex-column gap-5 d-flex justify-content-center align-items-center"
+            >
+              <div class="card p-2" style="width: 18rem">
+                <div class="icon px-3">
+                  <img
+                    src="/icons/security.png"
+                    class="card-img-top w-25"
+                    alt="Security_icon"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Advanced Security</h5>
+                  <p class="card-text">
+                    Your data security is our top priority. MailSender employs
+                    industry-leading encryption protocols to protect your emails
+                    and personal information from unauthorized access.
+                  </p>
+                  <a
+                    href="https://www.hpe.com/in/en/security-risk-compliance-services.html?jumpid=ps_tfanpn2e9_aid-520097628&ef_id=Cj0KCQjwxeyxBhC7ARIsAC7dS38wgua6VkhzeU6mdYPtWDImsj1GyoQZTPhIR-BXoJs4C0uSnHrlN8kaAm6iEALw_wcB:G:s&s_kwcid=AL!13472!3!667148581196!p!!g!!it%20security%20services!20281339184!154767249067&gad_source=1&gclid=Cj0KCQjwxeyxBhC7ARIsAC7dS38wgua6VkhzeU6mdYPtWDImsj1GyoQZTPhIR-BXoJs4C0uSnHrlN8kaAm6iEALw_wcB"
+                    class="card-link"
+                    target="_blank"
+                    >Learn more...</a
+                  >
+                </div>
+              </div>
+              <div class="card p-2" style="width: 18rem">
+                <div class="icon px-3">
+                  <img
+                    src="/icons/attach.png"
+                    class="card-img-top w-25"
+                    alt="attachment_icon"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Attachments Made Simple</h5>
+                  <p class="card-text">
+                    MailSender attachment manager lets you quickly add and
+                    preview attachments before sending your emails, attached
+                    your email file and send email with your contact and hr.
+                  </p>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Email_attachment"
+                    target="_blank"
+                    class="card-link"
+                    >Learn more...</a
+                  >
+                </div>
+              </div>
+              <div class="card p-2" style="width: 18rem">
+                <div class="icon px-3">
+                  <img
+                    src="/icons/gmail.png"
+                    class="card-img-top w-25"
+                    alt="Gmail_icon"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">See Your Inbox In Gmail</h5>
+                  <p class="card-text">
+                    Check your email in your phone or laptop for reply of email
+                    in Inbox Navigate, Organize, and Stay Updated with Ease.our
+                    tool automatically send mail to the provide hr or contact
+                    mail.
+                  </p>
+                  <a
+                    href="https://www.webrankinfo.com/tips/gmail/sign-in/"
+                    target="_blank"
+                    class="card-link"
+                    >Learn more...</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <div id="footer-placeholder"></div>
 
@@ -211,9 +283,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

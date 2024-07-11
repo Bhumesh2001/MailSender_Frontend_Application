@@ -1,136 +1,136 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
 }
 
 .bg-img1 {
-    background-image: url('/images/email_img1.jpg');
+  background-image: url("/images/email_img1.jpg");
 }
 
 .bg-img2 {
-    background-image: url('/images/email_img2.jpg');
+  background-image: url("/images/email_img2.jpg");
 }
 
 .bg-img3 {
-    background-image: url('/images/email_img3.jpg');
+  background-image: url("/images/email_img3.jpg");
 }
 
 .bg-img4 {
-    background-image: url('/images/email_img4.jpg');
+  background-image: url("/images/email_img4.jpg");
 }
 
 .bg-img5 {
-    background-image: url('/images/email_img5.jpg');
+  background-image: url("/images/email_img5.jpg");
 }
 
 .carousel-caption,
 h1 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .carousel-item {
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
 }
 
 .carousel-item::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: black;
-    opacity: 0.4;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  opacity: 0.4;
 }
 
 .carousel-caption h1 {
-    font-size: 50px;
-    font-weight: 600;
+  font-size: 50px;
+  font-weight: 600;
 }
 
 /* *************** */
 
 .card-body a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .btn-rounded {
-    border-radius: 45px;
-    border: 3px solid;
-    padding: 15px;
-    width: 175px;
-    border-color: #ffd60a;
+  border-radius: 45px;
+  border: 3px solid;
+  padding: 15px;
+  width: 175px;
+  border-color: #ffd60a;
 }
 
 .btn-rounded:hover {
-    background-color: transparent;
-    color: #ffd60a;
+  background-color: transparent;
+  color: #ffd60a;
 }
 
 .card-img {
-    width: 100%;
-    height: 35vh;
-    object-fit: cover;
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
 }
 
 /* ********** */
 
 .services-section {
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 .service-card {
-    transition: transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .service-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .service-icon {
-    font-size: 50px;
-    color: #007bff;
+  font-size: 50px;
+  color: #007bff;
 }
 
 .contact-mail {
-    text-decoration: none;
-    color: #037dff;
+  text-decoration: none;
+  color: #037dff;
 }
 
 .fab {
-    margin-right: 3px;
+  margin-right: 3px;
 }
 
 .btn-primary {
-    background-color: #6c63ff;
-    border: none;
-    transition: background-color 0.3s ease;
+  background-color: #6c63ff;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #5549d6;
+  background-color: #5549d6;
 }
 
 .profile-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .profile-icon::after {
-    display: none;
+  display: none;
 }
