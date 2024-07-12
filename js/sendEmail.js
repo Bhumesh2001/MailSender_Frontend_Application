@@ -13,7 +13,7 @@ socket.on("connect", () => {
 });
 
 socket.on("log", (message) => {
-  console.log(message);
+  console.log(message, '========>');
   const Ptag = document.createElement("p");
   if (message.success) {
     Ptag.textContent = message.mesg;
