@@ -1,14 +1,21 @@
-const socket = io("https://mailsender-backend-application.onrender.com");
+const socket = io("http://localhost:5000");
 
 let log = document.getElementById("log");
 let ptag = document.createElement("p");
 const log_box = document.getElementById('log-box');
+
+const randomId = () => Math.random().toString(36).substring(2);
+const userId = randomId();
+
+socket.emit('register', userId);
+console.log(userId);
 
 socket.on("connect", () => {
   console.log("Connected to the server");
 });
 
 socket.on("log", (message) => {
+  console.log(message);
   const Ptag = document.createElement("p");
   if (message.success) {
     Ptag.textContent = message.mesg;
@@ -31,10 +38,10 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
   log.textContent = '';
 
   let bool = authenticateUser();
-  if(!bool){
+  if (!bool) {
     setTimeout(() => {
-      window.location.href = '/sendEmail.html';
-    },1000);
+      window.location.href = '/login.html';
+    }, 1000);
   };
 
   let formData = {
@@ -76,7 +83,7 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
     await sendDataToServer(formData);
   }
   async function sendDataToServer(formData) {
-    let response = await fetch("https://mailsender-backend-application.onrender.com/mail", {
+    let response = await fetch("http://localhost:5000/mail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
