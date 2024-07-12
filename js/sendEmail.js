@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000");
+const socket = io("https://mailsenderapp.netlify.app");
 
 let log = document.getElementById("log");
 let ptag = document.createElement("p");
@@ -83,7 +83,7 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
     await sendDataToServer(formData);
   }
   async function sendDataToServer(formData) {
-    let response = await fetch("http://localhost:5000/mail", {
+    let response = await fetch("https://mailsenderapp.netlify.app/mail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
