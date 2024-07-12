@@ -4,18 +4,12 @@ let log = document.getElementById("log");
 let ptag = document.createElement("p");
 const log_box = document.getElementById('log-box');
 
-const randomId = () => Math.random().toString(36).substring(2);
-const userId = randomId();
-
-socket.emit('join', userId);
-
 socket.on("connect", () => {
   console.log("Connected to the server");
 });
 
 socket.on("log", (message) => {
-  if(message.userId === userId){
-    const Ptag = document.createElement("p");
+  const Ptag = document.createElement("p");
     if (message.success) {
       Ptag.textContent = message.mesg;
       Ptag.classList.add("text-success");
@@ -26,7 +20,6 @@ socket.on("log", (message) => {
       log.appendChild(Ptag);
     }
     log_box.scrollTop = log_box.scrollHeight;
-  };
 });
 
 socket.on("disconnect", () => {
