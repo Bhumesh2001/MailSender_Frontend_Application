@@ -7,6 +7,8 @@ const log_box = document.getElementById('log-box');
 const randomId = () => Math.random().toString(36).substring(2);
 const userId = randomId();
 
+socket.emit('join', userId);
+
 socket.on("connect", () => {
   console.log("Connected to the server");
 });
