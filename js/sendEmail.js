@@ -14,19 +14,19 @@ socket.on("connect", () => {
 });
 
 socket.on("log", (message) => {
-  console.log(message, '========>');
-  // if(message.userId === userId){}
-  const Ptag = document.createElement("p");
-  if (message.success) {
-    Ptag.textContent = message.mesg;
-    Ptag.classList.add("text-success");
-    log.appendChild(Ptag);
-  } else {
-    Ptag.textContent = message.mesg;
-    Ptag.classList.add("text-danger");
-    log.appendChild(Ptag);
-  }
-  log_box.scrollTop = log_box.scrollHeight;
+  if(message.userId === userId){
+    const Ptag = document.createElement("p");
+    if (message.success) {
+      Ptag.textContent = message.mesg;
+      Ptag.classList.add("text-success");
+      log.appendChild(Ptag);
+    } else {
+      Ptag.textContent = message.mesg;
+      Ptag.classList.add("text-danger");
+      log.appendChild(Ptag);
+    }
+    log_box.scrollTop = log_box.scrollHeight;
+  };
 });
 
 socket.on("disconnect", () => {
