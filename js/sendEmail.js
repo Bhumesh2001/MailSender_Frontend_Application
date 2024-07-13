@@ -4,22 +4,25 @@ let log = document.getElementById("log");
 let ptag = document.createElement("p");
 const log_box = document.getElementById('log-box');
 
+const userId = Math.random().toString(36).substring(2, 10 + 2);
+socket.emit('register', userId);
+
 socket.on("connect", () => {
   console.log("Connected to the server");
 });
 
 socket.on("log", (message) => {
   const Ptag = document.createElement("p");
-    if (message.success) {
-      Ptag.textContent = message.mesg;
-      Ptag.classList.add("text-success");
-      log.appendChild(Ptag);
-    } else {
-      Ptag.textContent = message.mesg;
-      Ptag.classList.add("text-danger");
-      log.appendChild(Ptag);
-    }
-    log_box.scrollTop = log_box.scrollHeight;
+  if (message.success) {
+    Ptag.textContent = message.mesg;
+    Ptag.classList.add("text-success");
+    log.appendChild(Ptag);
+  } else {
+    Ptag.textContent = message.mesg;
+    Ptag.classList.add("text-danger");
+    log.appendChild(Ptag);
+  }
+  log_box.scrollTop = log_box.scrollHeight;
 });
 
 socket.on("disconnect", () => {
@@ -44,6 +47,7 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
     hr_emails: document.querySelector("#exampleInputEmail2").value,
     subject: document.querySelector("#subject").value,
     body: document.querySelector("#body").value,
+    userId,
   };
 
   const button = document.getElementById("my-btn");
