@@ -14,11 +14,11 @@ socket.on("connect", () => {
 socket.on("log", (message) => {
   const Ptag = document.createElement("p");
   if (message.success) {
-    Ptag.textContent = message.mesg.slice(1, message.mesg.length - 1);
+    Ptag.textContent = message.mesg;
     Ptag.classList.add("text-success");
     log.appendChild(Ptag);
   } else {
-    Ptag.textContent = message.mesg.slice(1, message.mesg.length - 1);
+    Ptag.textContent = message.mesg;
     Ptag.classList.add("text-danger");
     log.appendChild(Ptag);
   }
