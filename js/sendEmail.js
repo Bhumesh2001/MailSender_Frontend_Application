@@ -2,7 +2,6 @@ const socket = io('https://mailsender-backend-application.onrender.com');
 
 let log = document.getElementById("log");
 let ptag = document.createElement("p");
-const log_box = document.getElementById('log-box');
 
 const userId = Math.random().toString(36).substring(2, 10 + 2);
 socket.emit('register', userId);
@@ -22,7 +21,7 @@ socket.on("log", (message) => {
     Ptag.classList.add("text-danger");
     log.appendChild(Ptag);
   }
-  log_box.scrollTop = log_box.scrollHeight;
+  log.parentNode.scrollTop = log.parentNode.scrollHeight;
 });
 
 socket.on("disconnect", () => {
