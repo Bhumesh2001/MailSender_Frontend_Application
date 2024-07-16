@@ -2,7 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f8f9fa;
+}
+
+.index-body{
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
 .bg-img1 {
@@ -23,6 +26,10 @@ body {
 
 .bg-img5 {
   background-image: url("/images/email_img5.jpg");
+}
+
+.card_bg-color{
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .carousel-caption,
@@ -58,6 +65,10 @@ h1 {
 }
 
 /* *************** */
+
+.card-bg-color{
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
 
 .card-body a {
   text-decoration: none;
