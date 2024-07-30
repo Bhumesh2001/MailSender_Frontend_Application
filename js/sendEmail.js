@@ -1,4 +1,4 @@
-const socket = io('https://mailsender-backend-application.onrender.com');
+const socket = io('http://localhost:5000');
 
 let log = document.getElementById("log");
 let ptag = document.createElement("p");
@@ -80,7 +80,7 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
     await sendDataToServer(formData);
   }
   async function sendDataToServer(formData) {
-    let response = await fetch("https://mailsender-backend-application.onrender.com/mail", {
+    let response = await fetch("http://localhost:5000/mail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
